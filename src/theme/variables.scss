@@ -1,0 +1,37 @@
+// Ionic Variables and Theming
+// --------------------------------------------------
+// Para más información sobre variables y temas:
+// https://ionicframework.com/docs/theming/basics
+
+// Configuración de tipografía global
+:root {
+  // Fuente principal
+  --ion-font-family: "Lato", sans-serif;
+
+  // Pesos de fuente
+  --ion-font-weight-thin: 100;
+  --ion-font-weight-light: 300;
+  --ion-font-weight-regular: 400;
+  --ion-font-weight-bold: 700;
+  --ion-font-weight-black: 900;
+
+  // Variables específicas para componentes
+  --ion-heading-font-weight: var(--ion-font-weight-bold);
+  --ion-item-font-weight: var(--ion-font-weight-regular);
+  --ion-button-font-weight: var(--ion-font-weight-bold);
+
+  // Configuraciones para tamaños de texto
+  --ion-text-xs: 12px;
+  --ion-text-sm: 14px;
+  --ion-text-md: 16px;
+  --ion-text-lg: 18px;
+  --ion-text-xl: 20px;
+}
+
+// Configuraciones específicas para modo oscuro
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Mantener las mismas configuraciones de tipografía en modo oscuro
+    // Pero puedes ajustar otras propiedades si lo deseas
+  }
+}
