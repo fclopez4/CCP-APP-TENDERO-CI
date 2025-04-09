@@ -29,7 +29,10 @@ jobs:
         node-version: '22'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+
+    - name: Install Ionic CLI
+      run: npm install -g @ionic/cli
 
     - name: Build Ionic
       run: ionic build && ionic capacitor copy android
