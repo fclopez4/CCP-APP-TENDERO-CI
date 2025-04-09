@@ -34,13 +34,15 @@ jobs:
     - name: Install Ionic CLI
       run: npm install -g @ionic/cli
 
-    - name: Build Ionic
-      run: ionic build && ionic capacitor copy android
-      
+    - name: Build Ionic and copy to Android
+      run: |
+        ionic build --prod
+        ionic capacitor sync android
+
     - name: Grant execute permission for gradlew
       working-directory: ./android
       run: chmod +x gradlew
-      
+
     - name: Build debug with Gradle
       working-directory: ./android
       run: ./gradlew assembleDebug
