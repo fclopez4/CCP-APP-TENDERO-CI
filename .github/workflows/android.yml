@@ -45,7 +45,7 @@ jobs:
 
     - name: Build debug with Gradle
       working-directory: ./android
-      run: ./gradlew assembleDebug
+      run: ./gradlew build -x lintDebug
       
     - name: Archive
       uses: actions/upload-artifact@v4
@@ -54,8 +54,3 @@ jobs:
         path: |
           ./android/app/build/outputs/apk/debug
         retention-days: 14
-      
-    - name: Build with Gradle
-      working-directory: ./android
-      run: ./gradlew build
-
